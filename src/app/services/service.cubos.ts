@@ -96,6 +96,8 @@ export class ServiceCubos {
         var url = environment.urlApi + request;
 
         return this._http.post(url, {headers: header});
+
+        //tbn se ha probado con pasar null pero sigue sin funcionar ??
     }
 
     

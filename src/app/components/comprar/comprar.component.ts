@@ -50,8 +50,5 @@ export class ComprarComponent implements OnInit{
     })
   }
 
-  logout():void{
-    environment.token = "";
-    this._router.navigate(["/"]);
-  }
+  
 }

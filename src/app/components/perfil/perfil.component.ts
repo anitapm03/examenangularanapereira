@@ -3,6 +3,7 @@ import { Compra } from 'src/app/models/Compra';
 import { Usuario } from 'src/app/models/Usuario';
 import { ServiceCubos } from 'src/app/services/service.cubos';
 import { environment } from 'src/environments/environment.development';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -13,7 +14,7 @@ export class PerfilComponent implements OnInit{
   public compras!: Array<Compra>;
   public usuario!: Usuario;
 
-  constructor(private _service: ServiceCubos){}
+  constructor(private _service: ServiceCubos,private _router: Router){}
 
   ngOnInit(): void {
 
@@ -26,6 +27,11 @@ export class PerfilComponent implements OnInit{
     })
 
     
+  }
+
+  logout():void{
+    environment.token = "";
+    this._router.navigate(["/"]);
   }
 
 }
