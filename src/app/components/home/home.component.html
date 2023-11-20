@@ -1,0 +1,37 @@
+<div>
+    <h1>Lista de productos:</h1>
+
+    <div *ngFor="let cubo of cubos" >
+        <div class="card" style="width: 18rem;">
+            <img src="{{cubo.imagen}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">{{cubo.nombre}}</h4>
+              <h5>Precio: {{cubo.precio}}€</h5>
+              <p class="card-text">{{cubo.modelo}}, {{cubo.marca}}</p>
+              <a [routerLink]="['/cubo/'+ cubo.idCubo]" class="btn btn-primary">Detalles</a>
+            </div>
+          </div>
+          <br>
+    </div>
+
+    <!-- <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cubo of cubos">
+                <td>
+                    <img src="{{cubo.imagen}}" style="width: 150px; height: 150px;"/>
+                </td>
+                <td>{{cubo.nombre}}</td>
+                <td>{{cubo.precio}}</td>
+            </tr>
+        </tbody>
+    </table> -->
+
+    
+</div>

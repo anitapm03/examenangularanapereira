@@ -1,0 +1,25 @@
+<div>
+    <h1>Bienvenido {{usuario.nombre}}</h1>
+
+    <p>Email: {{usuario.email}}</p>
+
+    <button class="btn btn-success" [routerLink]="['/comprar/'+usuario.idUsuario]">Hacer una compra</button>
+
+    <h3>Tu historial de compras:</h3>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>ID Cubo</th>
+                <th>ID Pedido</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let compra of compras">
+                <td>{{compra.idCubo}}</td>
+                <td>{{compra.idPedido}}</td>
+                <td>{{compra.fechaPedido}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,14 @@
+<div>
+    <h1 >Iniciar sesión:</h1>
+
+    <form #login="ngForm" style="margin: 0 auto; width: 70%;">
+        <label>Email:</label>
+        <input type="text" name="cajaemail" #cajaemail class="form-control" />
+        <br>
+        <label>Contraseña:</label>
+        <input type="password" name="cajapass" #cajapass class="form-control" />
+        <br>
+        <button class="btn btn-dark" (click)="hacerLogin()"
+        >Entrar!</button>
+    </form>
+</div>

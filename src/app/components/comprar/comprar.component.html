@@ -1,0 +1,15 @@
+<div>
+    <h1 >Nueva compra:</h1>
+
+    <form #compra="ngForm" style="margin: 0 auto; width: 70%;">
+        <label>Elige el cubo:</label>
+        <select class="form-control"
+        name="selectcubo" #selectcubo>
+            <option *ngFor="let cubo of cubos" value="{{cubo.idCubo}}" >{{cubo.nombre}}</option>
+        </select>
+        <br>
+        
+        <button class="btn btn-dark" (click)="hacerCompra()"
+        >Comprar!</button>
+    </form>
+</div>

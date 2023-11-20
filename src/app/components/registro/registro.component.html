@@ -1,0 +1,17 @@
+<div>
+    <h1 >Registrarse:</h1>
+
+    <form #register="ngForm" style="margin: 0 auto; width: 70%;">
+        <label>Nombre:</label>
+        <input type="text" name="cajanombre" #cajanombre class="form-control" />
+        <br>
+        <label>Email:</label>
+        <input type="text" name="cajaemail" #cajaemail class="form-control" />
+        <br>
+        <label>Contraseña:</label>
+        <input type="password" name="cajapass" #cajapass class="form-control" />
+        <br>
+        <button class="btn btn-dark" (click)="hacerRegistro()"
+        >Registrarme!</button>
+    </form>
+</div>
