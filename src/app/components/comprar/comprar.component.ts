@@ -4,6 +4,7 @@ import { ServiceCubos } from 'src/app/services/service.cubos';
 import { Cubo } from 'src/app/models/Cubo';
 import { Router } from '@angular/router';
 import { ActivatedRoute, Params } from '@angular/router';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-comprar',
@@ -47,5 +48,10 @@ export class ComprarComponent implements OnInit{
     this._service.comprar(idCubo).subscribe(response=>{
       this._router.navigate(["/perfil"]);
     })
+  }
+
+  logout():void{
+    environment.token = "";
+    this._router.navigate(["/"]);
   }
 }
